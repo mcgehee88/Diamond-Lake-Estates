@@ -1,0 +1,11 @@
+{
+  "newsletters": [
+    {
+      "id": 1,
+      "title": "January 2026 Newsletter",
+      "date": "January 15, 2026",
+      "year": "2026",
+      "file": "newsletters/2026-01.pdf"
+    }
+  ]
+}

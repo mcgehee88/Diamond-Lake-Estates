@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletters - Diamond Lake Estates Civic League</title>
+    <meta property="og:title" content="Diamond Lake Estates in Virginia Beach">
+    <meta property="og:description" content="The Diamond Lake Estates Civic League is a nonprofit community organization serving residents of the Diamond Lake Estates neighborhood in Virginia Beach.">
+    <meta property="og:image" content="https://diamondlakeestates.com/og-image.png">
+    <meta property="og:url" content="https://diamondlakeestates.com/newsletters">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Diamond Lake Estates in Virginia Beach">
+    <meta name="twitter:description" content="The Diamond Lake Estates Civic League is a nonprofit community organization serving residents of the Diamond Lake Estates neighborhood in Virginia Beach.">
+    <meta name="twitter:image" content="https://diamondlakeestates.com/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand" style="text-decoration: none; color: inherit;">
+                <h1>Diamond Lake Estates</h1>
+                <div class="nav-subtitle">Civic League</div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a class='nav-link' href='/'>Home</a></li>
+                <li><a class='nav-link' href='/dues'>Pay Dues</a></li>
+                <li><a class='nav-link active' href='/newsletters'>Newsletters</a></li>
+                <li><a class='nav-link' href='/events'>Events</a></li>
+                <li><a class='nav-link' href='/resources'>Resources</a></li>
+                <li><a class='nav-link' href='/about'>About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Community Newsletters</h1>
+            <p class="page-subtitle">Stay informed about neighborhood news and updates</p>
+        </div>
+    </section>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Latest Newsletter -->
+            <div class="content-card" style="background: linear-gradient(135deg, rgba(30, 90, 125, 0.05) 0%, rgba(232, 119, 34, 0.05) 100%);" id="latestNewsletter">
+                <!-- Loaded dynamically -->
+            </div>
+
+            <!-- Stay Connected CTA -->
+            <div style="padding: 60px 0; text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 600; color: var(--color-primary); margin-bottom: 16px;">Stay Connected</h2>
+                <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 32px;">Join our community directory to receive monthly newsletters and stay informed about neighborhood events and updates.</p>
+                <a href="/directory" class="btn btn-primary" style="font-size: 1rem; padding: 14px 40px;">Join the Directory</a>
+            </div>
+
+            <!-- Newsletter Archive -->
+            <div class="content-card" style="margin-top: 48px;">
+                <h2>Newsletter Archive</h2>
+                <p style="margin-bottom: 32px;">Browse past newsletters to catch up on neighborhood news and updates.</p>
+                
+                <div id="newsletterArchive">
+                    <!-- Archive loaded from JSON -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Diamond Lake Estates Civic League</h4>
+                    <p>Serving our Virginia Beach neighborhood since 1961. A volunteer-run organization dedicated to improving our community.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href='/dues'>Pay Dues</a></li>
+                        <li><a href='/newsletters'>Latest Newsletter</a></li>
+                        <li><a href='/events'>Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <p>Questions or concerns?<br>
+                    Email: <a href="mailto:contact@diamondlakeestates.com">contact@diamondlakeestates.com</a></p>
+                    <p style="margin-top: 16px; font-size: 0.95rem;">
+                        <a href="/directory" style="color: white; opacity: 0.9; text-decoration: underline;">Join our community directory</a> to stay connected and receive our newsletter.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Diamond Lake Estates Civic League, Inc. This is a volunteer-run community organization. No affiliations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+    <script>
+        fetch('data/newsletters.json')
+            .then(response => response.json())
+            .then(data => {
+                // Load latest newsletter
+                if (data.newsletters && data.newsletters.length > 0) {
+                    const latest = data.newsletters[0];
+                    const latestDiv = document.getElementById('latestNewsletter');
+                    latestDiv.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                            <span style="background: var(--color-accent); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.875rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Latest</span>
+                            <h2 style="margin: 0;">${latest.title}</h2>
+                        </div>
+                        <p style="font-size: 1.1rem; margin-bottom: 32px;">Welcome to our latest newsletter! This edition includes important updates and information for our community.</p>
+                        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                            <a href="${latest.file}" target="_blank" class="btn btn-primary">View Newsletter (PDF)</a>
+                            <a href="${latest.file}" download class="btn btn-outline">Download PDF</a>
+                        </div>
+                        <div style="margin-top: 32px; padding: 20px; background: white; border-radius: 8px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">
+                                <strong>Published:</strong> ${latest.date}
+                            </p>
+                        </div>
+                    `;
+                }
+                
+                const archive = document.getElementById('newsletterArchive');
+                
+                // Group by year
+                const byYear = {};
+                data.newsletters.forEach(newsletter => {
+                    const year = newsletter.year;
+                    if (!byYear[year]) byYear[year] = [];
+                    byYear[year].push(newsletter);
+                });
+                
+                // Sort years descending
+                const years = Object.keys(byYear).sort((a, b) => b - a);
+                
+                years.forEach(year => {
+                    const yearSection = document.createElement('div');
+                    yearSection.style.marginBottom = '32px';
+                    
+                    const yearTitle = document.createElement('h3');
+                    yearTitle.textContent = year;
+                    yearTitle.style.marginBottom = '16px';
+                    yearTitle.style.color = 'var(--color-primary)';
+                    yearSection.appendChild(yearTitle);
+                    
+                    byYear[year].forEach(newsletter => {
+                        const item = document.createElement('div');
+                        item.className = 'newsletter-item';
+                        item.innerHTML = `
+                            <div class="newsletter-info">
+                                <h3>${newsletter.title}</h3>
+                                <p>${newsletter.date}</p>
+                            </div>
+                            <div class="newsletter-actions">
+                                <a href="${newsletter.file}" target="_blank" class="btn btn-outline" style="padding: 10px 20px;">View</a>
+                                <a href="${newsletter.file}" download class="btn btn-outline" style="padding: 10px 20px;">Download</a>
+                            </div>
+                        `;
+                        yearSection.appendChild(item);
+                    });
+                    
+                    archive.appendChild(yearSection);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading newsletters:', error);
+                document.getElementById('newsletterArchive').innerHTML = '<p>Error loading newsletters. Please try again later.</p>';
+            });
+    </script>
+</body>
+</html>
