@@ -1,0 +1,104 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║          DIAMOND LAKE ESTATES CIVIC LEAGUE WEBSITE                        ║
+║                                                                            ║
+║  Everything you need is in this folder. Here's what to do next:          ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCATION:  /home/workspace/Diamond Lake Estates Website/
+
+🌐 LIVE SITE: https://diamondlakeestates.com
+
+═══════════════════════════════════════════════════════════════════════════════
+
+HOW TO USE THIS:
+
+For your NEXT chat when you want changes:
+
+1. Open a new chat
+2. Copy and paste from: NEXT-CHAT-PASTE-THIS.txt
+3. Add your request
+4. Done. AI handles the rest.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FILES IN THIS FOLDER:
+
+📄 START-HERE.txt (this file)
+   ↳ You are here!
+
+📄 NEXT-CHAT-PASTE-THIS.txt
+   ↳ Copy this into your next chat (it has the prompt)
+
+📄 README.md
+   ↳ Quick overview of the site, structure, design system
+
+📄 SETUP-INSTRUCTIONS.md
+   ↳ How the workflow works (GitHub → Netlify)
+
+📄 DLE-HANDOFF-PROMPT.md
+   ↳ Full technical reference for the AI (credentials, files, rules)
+
+📁 All website files:
+   ↳ index.html, about.html, dues.html, newsletters.html, events.html, 
+     resources.html, directory.html, styles.css, script.js, images, data/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CREDENTIALS (Already stored in Zo):
+
+✅ github_token — Settings > Developers
+   (GitHub personal access token, scope: repo)
+
+✅ NETLIFY_PERSONAL_ACCESS_TOKEN — Settings > Developers
+   (For deploying to Netlify)
+
+✅ GitHub Repo: https://github.com/freetrials/diamond-lake-estates-website
+   (All code lives here)
+
+✅ Netlify Site ID: 08354646-cdc1-4a5a-b890-ff546200a777
+   (Where it's deployed live)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHAT'S ALREADY DONE:
+
+✅ All website files copied to this folder
+✅ Git initialized (ready to push to GitHub)
+✅ Credentials stored securely in Zo
+✅ Handoff prompt created for future chats
+✅ Documentation complete (README, SETUP, PROMPT)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHEN YOU MAKE A REQUEST:
+
+1. Open a new chat with me (or any AI)
+2. Paste the prompt from NEXT-CHAT-PASTE-THIS.txt
+3. Add your request (e.g., "Change the hero text to...")
+4. The AI will:
+   ✓ Clone from GitHub
+   ✓ Make your changes
+   ✓ Test it (screenshots)
+   ✓ Push to GitHub
+   ✓ Deploy to Netlify
+   ✓ Verify it's live
+
+═══════════════════════════════════════════════════════════════════════════════
+
+EXAMPLE NEXT CHAT:
+
+I'm working on the Diamond Lake Estates Civic League website.
+
+GitHub token secret: github_token
+Repo: https://github.com/freetrials/diamond-lake-estates-website
+
+Here's what needs to change:
+Change the hero heading color to red.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+That's it! Fresh chats = no long conversations, no lost context, clean workflows.
+
+Good luck! 🚀

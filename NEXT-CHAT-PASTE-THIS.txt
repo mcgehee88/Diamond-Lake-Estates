@@ -1,0 +1,28 @@
+================================================================================
+PASTE THIS IN YOUR NEXT CHAT WITH ME
+================================================================================
+
+I'm working on the Diamond Lake Estates Civic League website.
+
+GitHub token secret: github_token
+Repo: https://github.com/freetrials/diamond-lake-estates-website
+
+Here's what needs to change:
+[YOUR REQUEST HERE]
+
+================================================================================
+
+That's it. I'll handle everything:
+- Clone GitHub repo
+- Make your changes
+- Test (desktop + mobile)
+- Push to GitHub
+- Deploy to Netlify
+- Verify it's live
+
+For technical reference, see:
+- README.md (overview)
+- SETUP-INSTRUCTIONS.md (workflow)
+- DLE-HANDOFF-PROMPT.md (full technical details)
+
+================================================================================
