@@ -525,11 +525,6 @@ body {
     transform: translateY(-2px);
 }
 
-.facebook-link:hover {
-    background: var(--color-accent);
-    opacity: 1 !important;
-}
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 30px;
