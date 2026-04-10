@@ -2,6 +2,34 @@
 
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Announcement Modal Logic
+    const modal = document.getElementById('announcementModal');
+    if (modal) {
+        const closeBtn = modal.querySelector('.modal-close');
+        const hasSeenModal = localStorage.getItem('dleAnnouncementSeen');
+        
+        // Show modal if user hasn't seen it before
+        if (!hasSeenModal) {
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 500);
+        }
+        
+        // Close modal when clicking X
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('show');
+            localStorage.setItem('dleAnnouncementSeen', 'true');
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.classList.remove('show');
+                localStorage.setItem('dleAnnouncementSeen', 'true');
+            }
+        });
+    }
+
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     

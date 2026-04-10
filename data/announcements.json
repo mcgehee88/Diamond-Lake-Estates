@@ -1,0 +1,22 @@
+{
+  "announcements": [
+    {
+      "id": 1,
+      "date": "2026-04-14",
+      "title": "Next BIG Civic League Meeting - April 14th",
+      "content": "Join us Tuesday April 14th at 7pm at Virginia Wesleyan University. Public Works stormwater operations engineer Jonas Alered will be joining us to discuss how Diamond Lake needs to be dredged and how we fit within the priority list to get it done. Let's show up and be respectful of his time.",
+      "location": "Pearce Hospitality Room, Virginia Wesleyan University",
+      "time": "7:00 PM",
+      "documents": [
+        {
+          "title": "Batten Entrance Map",
+          "file": "announcements/batten-entrance-map.pdf"
+        },
+        {
+          "title": "Directions to Meeting",
+          "file": "announcements/batten-directions.pdf"
+        }
+      ]
+    }
+  ]
+}
