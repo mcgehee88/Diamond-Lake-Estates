@@ -85,10 +85,21 @@ if (document.getElementById('announcementList')) {
                 const item = document.createElement('div');
                 item.className = 'announcement-item';
                 item.style.animationDelay = `${index * 0.1}s`;
+                
+                let pdfLinks = '';
+                if (announcement.pdfs && announcement.pdfs.length > 0) {
+                    pdfLinks = '<div class="announcement-pdfs">';
+                    announcement.pdfs.forEach(pdf => {
+                        pdfLinks += `<a href="${pdf.url}" class="pdf-link" target="_blank" rel="noopener noreferrer">📄 ${pdf.title}</a>`;
+                    });
+                    pdfLinks += '</div>';
+                }
+                
                 item.innerHTML = `
                     <span class="announcement-date">${formatDate(announcement.date)}</span>
                     <h3>${announcement.title}</h3>
                     <p>${announcement.content}</p>
+                    ${pdfLinks}
                 `;
                 container.appendChild(item);
             });
