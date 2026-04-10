@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('announcementModal');
     if (modal) {
         const closeBtn = modal.querySelector('.modal-close');
-        const hasSeenModal = localStorage.getItem('dleAnnouncementSeen');
         
-        // Show modal if user hasn't seen it before
-        if (!hasSeenModal) {
+        // Check if we're before the cutoff date (April 14, 2026 at 9pm EST)
+        const cutoffDate = new Date('2026-04-14T21:00:00-05:00'); // 9pm EST
+        const now = new Date();
+        
+        // Show modal on every visit until the cutoff date
+        if (now < cutoffDate) {
             setTimeout(() => {
                 modal.classList.add('show');
             }, 500);
@@ -18,14 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close modal when clicking X
         closeBtn.addEventListener('click', function() {
             modal.classList.remove('show');
-            localStorage.setItem('dleAnnouncementSeen', 'true');
         });
         
         // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
                 modal.classList.remove('show');
-                localStorage.setItem('dleAnnouncementSeen', 'true');
             }
         });
     }
