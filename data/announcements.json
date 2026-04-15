@@ -1,6 +1,16 @@
 {
   "announcements": [
     {
+      "id": 2,
+      "date": "2026-04-15",
+      "title": "🌊 April 14th Meeting Recap with City Stormwater & More 🌊",
+      "content": "A huge thank you to everyone who joined us for our meeting with Jonas and Emiliee from City Stormwater! Key takeaways: Diamond Lake is scheduled for a fresh inspection in August 2026 that will determine our dredging priority. We also voted to increase dues to $50/year starting in 2027 and approved fishing guest passes ($5 daily, $25 yearly).",
+      "link": {
+        "text": "View Full Meeting Details & Photos",
+        "url": "/events#past-meetings"
+      }
+    },
+    {
       "id": 1,
       "date": "2026-04-14",
       "title": "Next BIG Civic League Meeting - April 14th",

@@ -397,6 +397,25 @@ body {
 }
 
 .pdf-link:hover {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, #c96619 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.announcement-link-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.announcement-link-btn:hover {
+    background: var(--color-accent-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }

@@ -96,11 +96,17 @@ if (document.getElementById('announcementList')) {
                     pdfLinks += '</div>';
                 }
                 
+                let linkButton = '';
+                if (announcement.link) {
+                    linkButton = `<a href="${announcement.link.url}" class="announcement-link-btn">${announcement.link.text} →</a>`;
+                }
+                
                 item.innerHTML = `
                     <span class="announcement-date">${formatDate(announcement.date)}</span>
                     <h3>${announcement.title}</h3>
                     <p>${announcement.content}</p>
                     ${pdfLinks}
+                    ${linkButton}
                 `;
                 container.appendChild(item);
             });
