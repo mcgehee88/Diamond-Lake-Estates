@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modal) {
         const closeBtn = modal.querySelector('.modal-close');
         
-        // Check if we're before the cutoff date (April 14, 2026 at 9pm EST)
-        const cutoffDate = new Date('2026-04-14T21:00:00-05:00'); // 9pm EST
+        // Check if we're before the cutoff date (April 30, 2026 at 11:59pm EST)
+        const cutoffDate = new Date('2026-04-30T23:59:00-05:00'); // End of April 2026
         const now = new Date();
         
         // Show modal on every visit until the cutoff date
